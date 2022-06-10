@@ -12,6 +12,14 @@ body{
   margin-top: 40px;
 }
 
+h1{
+  color: #1b1b32;
+  font-size: 25px;
+  font-family: Roboto,sans-serif;
+  text-align: center;
+  margin: 20px 0;
+}
+
 .task-app{
   display: flex;
   flex-wrap: wrap;
@@ -34,4 +42,15 @@ body{
   height: 90px;
   border-radius: 10px;
   border: solid 3px white;
+}
+
+/*TASK LIST*/
+
+.task-list-main{
+  width: 600px;
+  min-height: 500px;
+  background-color: #d0d0d5;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 26px;
 }
