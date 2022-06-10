@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import logoTheJeds from './images/Logo-TheJeds.png'
 
 function App() {
   return (
-    <div className="App">
-      React
+    <div className="task-app">
+      <div className='logo-TheJeds-container'>
+        <img src={logoTheJeds} className='logo-TheJeds' />
+      </div>
     </div>
   );
 }
