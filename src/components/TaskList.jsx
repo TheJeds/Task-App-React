@@ -13,7 +13,22 @@ function TaskList(){
             const updatedTasks = [task, ...tasks];
             setTasks(updatedTasks);
         }
-    }
+    };
+
+    const completeTask = id => {
+        const updatedTasks = tasks.map(task => {
+            if(task.id === id){
+                task.complete = !task.complete;
+            }
+            return task;
+        });
+        setTasks(updatedTasks);
+    };
+
+    const deleteTask = id => {
+        const updatedTasks = tasks.filter(task => task.id !== id);
+        setTasks(updatedTasks);
+    };
 
     return(
         <>
@@ -21,7 +36,7 @@ function TaskList(){
             <div className="task-list-container">
                 {
                     tasks.map((task) =>
-                        <Task key={task.id} id={task.id} text={task.text} complete={task.complete} />
+                        <Task key={task.id} id={task.id} text={task.text} complete={task.complete} deleteTask={deleteTask} completeTask={completeTask} />
                     )
                 }
             </div>
